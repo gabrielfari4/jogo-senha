@@ -1,7 +1,11 @@
+import InputTentativa from "../InputTentativa";
 
 const Senha = () => {
     return (
-        <h1>Senha</h1>
+        <>
+            <h1>Senha</h1>
+            <InputTentativa />
+        </>
     )
 }
 
