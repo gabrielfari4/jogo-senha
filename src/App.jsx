@@ -1,13 +1,15 @@
-import './App.css'
-import Senha from './components/Senha'
+import "./App.css";
+import Senha from "./components/Senha";
+import { SenhaProvider } from "./context/SenhaProvider";
 
 function App() {
-
-  return (
-    <>
-      <Senha />
-    </>
-  )
+    return (
+        <>
+            <SenhaProvider>
+                <Senha />
+            </SenhaProvider>
+        </>
+    );
 }
 
-export default App
+export default App;
