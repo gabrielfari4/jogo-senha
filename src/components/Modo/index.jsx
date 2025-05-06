@@ -1,8 +1,6 @@
 import { useContext } from "react";
 import { SenhaContext } from "../../context/SenhaContext";
 
-
-
 const Modo = ({ children, value, checked }) => {
     const {setPassword} = useContext(SenhaContext);
 
