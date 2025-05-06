@@ -1,0 +1,17 @@
+
+.letra {
+    background-color: gray;
+    width: 2vw;
+    height: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    &.valida {
+        background-color: yellow;
+    }
+    &.correta {
+        background-color: #00ba13;
+        border: solid 1px white;
+    }
+}
