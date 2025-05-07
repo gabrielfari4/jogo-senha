@@ -1,0 +1,9 @@
+
+h1 {
+    font-family: var(--fonte);
+    font-size: 5em;
+}
+
+p {
+    font-size: 1.5em;
+}

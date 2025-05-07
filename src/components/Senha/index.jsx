@@ -4,6 +4,7 @@ import Modo from "../Modo";
 import { SenhaContext } from "../../context/SenhaContext";
 import Adivinhar from "../Adivinhar";
 import Tentativas from "../Tentativas";
+import './Senha.module.css';
 
 const Senha = () => {
     const { password, randomWord, randomNumber, win, count, guesses } =

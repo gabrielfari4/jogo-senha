@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { SenhaContext } from "../../context/SenhaContext";
+import styles from './Modo.module.css';
 
 const Modo = ({ children, value, checked }) => {
     const {setPassword} = useContext(SenhaContext);
@@ -15,6 +16,7 @@ const Modo = ({ children, value, checked }) => {
                 value={value}
                 checked={checked}
                 onChange={handlePasswordChange}
+                className={styles.input}
             />
             {children}
         </label>
