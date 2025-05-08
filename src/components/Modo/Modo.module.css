@@ -54,6 +54,20 @@
     background-position: -24px 0;
   }
 
+  .variante,
+  .variante:active {
+    background-position: -24px 0;
+  }
+  
+  .variante:checked {
+    background-position: 0 0;
+  }
+  
+  .variante:checked ~ .variante,
+  .variante:checked ~ .variante:active {
+    background-position: 24px 0;
+  }
+
   .label {
     display: flex;
     justify-content: center;
@@ -63,8 +77,4 @@
 
   .children {
     font-size: 1.2em;
-  }
-
-  .variante {
-    transform: rotate(0.5turn);
   }
