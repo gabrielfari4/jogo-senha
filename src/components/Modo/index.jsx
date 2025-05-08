@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { SenhaContext } from "../../context/SenhaContext";
 import styles from './Modo.module.css';
 
-const Modo = ({ children, value, checked }) => {
+const Modo = ({ children, value, checked, variante }) => {
     const {setPassword} = useContext(SenhaContext);
 
     const handlePasswordChange = (event) => {
@@ -10,15 +10,15 @@ const Modo = ({ children, value, checked }) => {
     }
 
     return (
-        <label>
+        <label className={styles.label}>
             <input 
                 type="radio"
                 value={value}
                 checked={checked}
                 onChange={handlePasswordChange}
-                className={styles.input}
+                className={`${styles.input} ${styles[variante]}`}
             />
-            {children}
+            <p className={styles.children}>{children}</p>
         </label>
     )
 }
