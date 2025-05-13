@@ -1,13 +1,23 @@
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { SenhaContext } from "../../context/SenhaContext"
 
 const Adivinhar = () => {
     const {win, setWin, guess, setGuess, guesses, setGuesses, arrayAnswer, setCount, password} = useContext(SenhaContext);
+    const [alert, setAlert] = useState(null)
 
     const handleAnswer = () => {
         if (win) return;
+        console.log(guess.length);
+
+        if (guess.length < 5 && isNaN(password)) {
+            setAlert(`Digite mais ${5 - guess.length} letra(s)!`)
+        } else if (guess.length < 5 && !isNaN(password)) {
+            setAlert(`Digite mais ${5 - guess.length} número(s)!`)
+        }
         if (guess.length !== 5) return;
         if (guesses.length === 7) return;
+
+        
 
         const currentGuess = guess.toLowerCase().split('');
 
@@ -29,11 +39,15 @@ const Adivinhar = () => {
     }
 
     return (
-        <button 
-            onClick={handleAnswer}
-        >
-            ADIVINHAR
-        </button>
+        <>
+            {<p style={{color: "yellow"}}>{alert}</p>}
+            <button 
+                onClick={handleAnswer}
+                onBlur={() => setAlert(null)}
+                >
+                ADIVINHAR
+            </button>
+        </>
     )
 }
 

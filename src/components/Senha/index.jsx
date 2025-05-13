@@ -30,19 +30,19 @@ const Senha = () => {
                 </div>
             )}
             {password === randomWord ? (
-                <p>Adivinhe a senha de 5 letras!</p>
+                <p className={styles.texto}>Adivinhe a senha de 5 letras!</p>
             ) : (
-                <p>Adivinhe a senha de 5 digitos!</p>
+                <p className={styles.texto}>Adivinhe a senha de 5 digitos!</p>
             )}
             {count > 0 && !win ? (
-                <p>Você tem {count} chances.</p>
+                <p className={styles.texto}>Você tem {count} chances.</p>
             ) : !win ? (
-                <p>Acabaram suas chances =(</p>
+                <p className={styles.texto}>Acabaram suas chances =(</p>
             ) : null}
             <br />
             <InputTentativa />
             <br />
-            {!win ? <Adivinhar /> : <p>Parabéns! Resposta correta!</p>}
+            {!win ? <Adivinhar /> : <p className={styles.texto}>Parabéns! Resposta correta!</p>}
             <div>
                 <ul>
                     {guesses.map((element, index) => {
