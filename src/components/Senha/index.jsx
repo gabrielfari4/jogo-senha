@@ -1,14 +1,24 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import InputTentativa from "../InputTentativa";
 import Modo from "../Modo";
 import { SenhaContext } from "../../context/SenhaContext";
 import Adivinhar from "../Adivinhar";
 import Tentativas from "../Tentativas";
 import styles from './Senha.module.css';
+import Gif from "../Gif";
 
 const Senha = () => {
     const { password, randomWord, randomNumber, win, count, guesses } =
         useContext(SenhaContext);
+    const [gifOn, setGifOn] = useState(false)
+
+    const handleGif = () => {
+        setGifOn(true)
+        console.log(guesses.length);
+        console.log(win);
+        console.log(gifOn);
+        
+    }
 
     return (
         <>
@@ -40,9 +50,19 @@ const Senha = () => {
                 <p className={styles.texto}>Acabaram suas chances =(</p>
             ) : null}
             <br />
-            <InputTentativa />
+            {guesses.length < 7 && !win ? <InputTentativa gifOn={() => setGifOn(false)}/> : null}
+            
+                {guesses.length === 7 && !win && gifOn ? <Gif status='derrota'/> : null}
+                {(guesses.length >= 1 && guesses.length < 7) && !win && gifOn ? <Gif status='errou'/> : null}
+                {win && <Gif status='vitoria'/>}
+            
             <br />
-            {!win ? <Adivinhar /> : <p className={styles.texto}>Parabéns! Resposta correta!</p>}
+            {!win && guesses.length < 7
+                ? <Adivinhar gifOn={handleGif} /> 
+                : win
+                ? <p className={styles.texto}>Parabéns! Resposta correta!</p>
+                : <p className={styles.texto}>Você perdeu...<br/>A senha é {password.toUpperCase()}</p>
+            }
             <div>
                 <ul>
                     {guesses.map((element, index) => {

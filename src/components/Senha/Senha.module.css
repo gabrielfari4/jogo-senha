@@ -18,7 +18,7 @@ h1 {
 ul {
     list-style-type: none; 
     display: flex; 
-    flex-direction: column; 
+    flex-direction: column-reverse; 
     align-items: center; 
     row-gap: 1.2vh; 
     padding: 0;

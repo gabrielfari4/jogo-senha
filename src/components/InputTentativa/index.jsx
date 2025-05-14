@@ -3,13 +3,13 @@ import { SenhaContext } from "../../context/SenhaContext";
 import styles from './InputTentativa.module.css';
 
 
-const InputTentativa = () => {
+const InputTentativa = ({ gifOn }) => {
     const {guess, setGuess, password } = useContext(SenhaContext);
     const [alerta, setAlerta] = useState(null);
 
     const handleChange = (event) => {
         setGuess(event.target.value)
-        console.log(guess);
+        gifOn()
     }
 
     const keyTest = (e) => {
