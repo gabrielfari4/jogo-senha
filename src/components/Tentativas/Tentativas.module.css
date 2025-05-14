@@ -1,12 +1,14 @@
 
 .letra {
     background-color: gray;
-    width: 2vw;
-    height: 2vw;
+    width: 3vw;
+    height: 3vw;
     display: flex;
     align-items: center;
     justify-content: center;
     color: black;
+    font-size: 1.3em;
+    font-weight: 600;
     &.valida {
         background-color: yellow;
     }
