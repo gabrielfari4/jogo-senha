@@ -15,12 +15,12 @@ export const SenhaProvider = ({children}) => {
     const [win, setWin] = useState(false);
     const [guesses, setGuesses] = useState([]);
     const [count, setCount] = useState(7);
+    const [guessesCount, setGuessesCount] = useState(7)
 
     useEffect(() => {
         setArrayAnswer(password.split(""));
         console.log(randomWord);
         console.log(randomNumber);
-        console.log(arrayAnswer);
         
     }, [password]);
 
@@ -38,7 +38,9 @@ export const SenhaProvider = ({children}) => {
             guesses,
             setGuesses,
             count,
-            setCount
+            setCount,
+            guessesCount,
+            setGuessesCount
         }}>
             {children}
         </SenhaContext.Provider>

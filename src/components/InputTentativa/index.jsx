@@ -29,7 +29,6 @@ const InputTentativa = ({ gifOn }) => {
         <>
             <input 
                 type="text"
-                // TODO: elevar o estado para o value length < 5 no submit
                 value={guess.toUpperCase()}
                 onChange={handleChange}
                 maxLength={5}

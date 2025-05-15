@@ -8,15 +8,13 @@ import styles from './Senha.module.css';
 import Gif from "../Gif";
 
 const Senha = () => {
-    const { password, randomWord, randomNumber, win, count, guesses } =
+    const { password, randomWord, randomNumber, win, count, guesses, guessesCount } =
         useContext(SenhaContext);
     const [gifOn, setGifOn] = useState(false)
 
     const handleGif = () => {
         setGifOn(true)
         console.log(guesses.length);
-        console.log(win);
-        console.log(gifOn);
         
     }
 
@@ -50,14 +48,14 @@ const Senha = () => {
                 <p className={styles.texto}>Acabaram suas chances =(</p>
             ) : null}
             <br />
-            {guesses.length < 7 && !win ? <InputTentativa gifOn={() => setGifOn(false)}/> : null}
+            {guesses.length < guessesCount && !win ? <InputTentativa gifOn={() => setGifOn(false)}/> : null}
             
-                {guesses.length === 7 && !win && gifOn ? <Gif status='derrota'/> : null}
-                {(guesses.length >= 1 && guesses.length < 7) && !win && gifOn ? <Gif status='errou'/> : null}
+                {guesses.length === guessesCount && !win && gifOn ? <Gif status='derrota'/> : null}
+                {(guesses.length >= 1 && guesses.length < guessesCount) && !win && gifOn ? <Gif status='errou'/> : null}
                 {win && <Gif status='vitoria'/>}
             
             <br />
-            {!win && guesses.length < 7
+            {!win && guesses.length < guessesCount
                 ? <Adivinhar gifOn={handleGif} /> 
                 : win
                 ? <p className={styles.texto}>Parabéns! Resposta correta!</p>
