@@ -1,0 +1,35 @@
+
+.container {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+    width: 75%;
+    margin: 3vh auto;
+}
+
+.quadrado {
+    display: inline-block;
+    width: 1.2vw;
+    height: 1.2vw;
+    margin-right: 1vw;
+    vertical-align: middle;
+}
+
+div:nth-child(1) .quadrado {
+    background-color: gray;
+}
+
+div:nth-child(2) .quadrado {
+    background-color: yellow;
+}
+
+div:nth-child(3) .quadrado {
+    background-color: #00ba13;
+        border: solid 1px white;
+}
+
+.texto {
+    display: inline;
+    vertical-align: middle;
+}
