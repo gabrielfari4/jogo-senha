@@ -3,8 +3,9 @@
     text-align: start;
     display: flex;
     flex-direction: column;
+    align-items: start;
     row-gap: 1vh;
-    width: 75%;
+    width: 80%;
     margin: 3vh auto;
 }
 
@@ -32,4 +33,5 @@ div:nth-child(3) .quadrado {
 .texto {
     display: inline;
     vertical-align: middle;
+    font-size: .9em;
 }

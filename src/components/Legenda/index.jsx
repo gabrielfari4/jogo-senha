@@ -11,7 +11,7 @@ const Legenda = () => {
             <div>
             <span className={styles.quadrado}>
             </span>
-                <p className={styles.texto}>{isNaN(password) ? 'letra errada' : 'número errado'}</p>
+                <p className={styles.texto}>{isNaN(password) ? 'letra errada/não se repete mais' : 'número errado/não se repete mais'}</p>
             </div>
             <div>
                 <span className={styles.quadrado}>
