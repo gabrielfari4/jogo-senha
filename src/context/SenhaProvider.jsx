@@ -2,13 +2,15 @@ import { SenhaContext } from './SenhaContext';
 import { useEffect, useState } from 'react';
 import words from '../json/words.json';
 
-const randomWord = words[Math.floor(Math.random() * words.length)];
+
+let randomWord = words[Math.floor(Math.random() * words.length)];
 let randomNumber = Math.floor(Math.random() * 99999).toString();
 if (randomNumber.length < 5) {
     randomNumber = randomNumber.padStart(5, "0");
 }
 
 export const SenhaProvider = ({children}) => {
+    // const [password, setPassword] = useState();
     const [password, setPassword] = useState(randomWord);
     const [arrayAnswer, setArrayAnswer] = useState([]);
     const [guess, setGuess] = useState("");
@@ -16,11 +18,14 @@ export const SenhaProvider = ({children}) => {
     const [guesses, setGuesses] = useState([]);
     const [count, setCount] = useState(7);
     const [guessesCount, setGuessesCount] = useState(7)
+    const [gifOn, setGifOn] = useState(false)
+    
+        const handleGif = () => {
+            setGifOn(true)
+        }
 
     useEffect(() => {
         setArrayAnswer(password.split(""));
-        console.log(randomWord);
-        console.log(randomNumber);
         
     }, [password]);
 
@@ -29,6 +34,7 @@ export const SenhaProvider = ({children}) => {
             password,
             setPassword,
             arrayAnswer,
+            setArrayAnswer,
             randomNumber,
             randomWord,
             guess,
@@ -40,7 +46,10 @@ export const SenhaProvider = ({children}) => {
             count,
             setCount,
             guessesCount,
-            setGuessesCount
+            setGuessesCount,
+            gifOn,
+            handleGif,
+            setGifOn
         }}>
             {children}
         </SenhaContext.Provider>

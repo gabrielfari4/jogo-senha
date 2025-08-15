@@ -33,7 +33,7 @@ const InputTentativa = ({ gifOn }) => {
                 onChange={handleChange}
                 maxLength={5}
                 className={styles.input}
-                placeholder={isNaN(password) ? 'Digite uma palavra de 5 letras...' : 'Digite um número de 5 digitos...'}
+                placeholder={isNaN(password) ? 'Digite uma palavra de 5 letras...' : 'Digite um número de 5 dígitos...'}
                 onKeyDown={keyTest}
             />
             <br />

@@ -12,7 +12,7 @@ const Gif = ({ status }) => {
     const gifSrc = gifMap[status]
 
     return (
-            <img src={gifSrc} alt={`Gif de ${status}`} style={{ width: '20vw', height: '20vh'}}/>
+            <img src={gifSrc} alt={`Gif de ${status}`} style={{ width: '20vw', height: '20vh', borderRadius: '8px'}}/>
     )
 }
 

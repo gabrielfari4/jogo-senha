@@ -2,7 +2,7 @@ import { useContext, useState } from "react"
 import { SenhaContext } from "../../context/SenhaContext"
 
 const Adivinhar = ({ gifOn }) => {
-    const {win, setWin, guess, setGuess, setGuesses, arrayAnswer, setCount, password, count} = useContext(SenhaContext);
+    const {win, setWin, guess, setGuess, setGuesses, arrayAnswer, setCount, password} = useContext(SenhaContext);
     const [alert, setAlert] = useState(null)
 
     const handleAnswer = () => {
@@ -25,12 +25,8 @@ const Adivinhar = ({ gifOn }) => {
             return (oldGuess = [...oldGuess, newGuess]);
         });
 
-        console.log(count);
-        
         setCount((prevCount) => prevCount - 1);
-        console.log(count);
         
-
         if (password === guess.toLowerCase()) {
             return setWin(true)
         }
