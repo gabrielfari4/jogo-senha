@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { SenhaContext } from "../../context/SenhaContext";
+import { SenhaContext } from "../../../context/SenhaContext";
 
 
 const Reiniciar = () => {

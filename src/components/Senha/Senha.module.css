@@ -20,3 +20,18 @@ li {
     justify-content: center; 
     align-items: center;
 }
+
+@media screen and (max-width: 480px) {
+    li {
+        column-gap: 1vw;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 7em;
+    }
+    li {
+        column-gap: .5vw;
+    }
+}

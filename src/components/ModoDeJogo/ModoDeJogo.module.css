@@ -4,3 +4,9 @@
     justify-content: center;
     column-gap: 3vw;
 }
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .modo {
+        column-gap: 15vw;
+    }
+}

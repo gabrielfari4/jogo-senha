@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { SenhaContext } from "../../context/SenhaContext";
 import styles from "./GerarResultado.module.css";
-import Adivinhar from "../Adivinhar";
-import Reiniciar from "../Reiniciar";
+import Adivinhar from "./Adivinhar";
+import Reiniciar from "./Reiniciar";
 
 
 const GerarResultado = () => {

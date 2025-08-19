@@ -16,3 +16,9 @@
     font-size: .9em;
     color: red;
 }
+
+@media screen and (min-width: 480px) and (max-width: 1024px) {
+    .input::placeholder {
+        font-size: .9em;
+    }
+}

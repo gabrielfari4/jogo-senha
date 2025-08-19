@@ -18,3 +18,17 @@
         border: solid 1px white;
     }
 }
+
+@media screen and (max-width: 480px) {
+    .letra {
+        width: 8vw;
+        height: 5vh;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .letra {
+        width: 5vw;
+        height: 5vw;
+    }
+}

@@ -1,0 +1,22 @@
+
+.gif {
+    width: 20vw; 
+    height: 20vh; 
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 480px) {
+    .gif {
+        width: 50vw; 
+        height: 18vh; 
+        border-radius: 8px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .gif {
+        width: 40vw; 
+        height: 20vh; 
+        border-radius: 8px;
+    }
+}

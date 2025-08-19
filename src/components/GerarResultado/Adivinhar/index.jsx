@@ -1,5 +1,6 @@
 import { useContext, useState } from "react"
-import { SenhaContext } from "../../context/SenhaContext"
+import { SenhaContext } from "../../../context/SenhaContext"
+import styles from './Adivinhar.module.css';
 
 const Adivinhar = ({ gifOn }) => {
     const {win, setWin, guess, setGuess, setGuesses, arrayAnswer, setCount, password} = useContext(SenhaContext);
@@ -42,7 +43,8 @@ const Adivinhar = ({ gifOn }) => {
             <button 
                 onClick={handleAnswer}
                 onBlur={() => setAlert(null)}
-                >
+                className={styles.botao}
+            >
                 ADIVINHAR
             </button>
         </>

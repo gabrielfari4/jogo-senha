@@ -1,0 +1,10 @@
+
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .botao {
+        width: 30vw;
+        height: 4vh;
+        font-size: 1.5em;
+        padding: 0;
+    }
+}

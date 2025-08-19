@@ -2,3 +2,15 @@
 .texto {
     font-size: 1.5em;
 }
+
+@media screen and (max-width: 480px) {
+    .texto {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .texto {
+        font-size: 2.2em;
+    }
+}

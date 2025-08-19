@@ -35,3 +35,29 @@ div:nth-child(3) .quadrado {
     vertical-align: middle;
     font-size: .9em;
 }
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+    .quadrado {
+        width: 2.3vw;
+        height: 2.3vw;
+    }
+    .texto {
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .container {
+        width: 100%;
+    }
+    .quadrado {
+        width: 2.3vw;
+        height: 2.3vw;
+    }
+    .texto {
+        font-size: 1.5em;
+    }
+}
