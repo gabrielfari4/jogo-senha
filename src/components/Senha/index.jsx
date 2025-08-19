@@ -1,14 +1,13 @@
 import { useContext } from "react";
 import InputTentativa from "../InputTentativa";
 import { SenhaContext } from "../../context/SenhaContext";
-import './Senha.module.css';
+import styles from './Senha.module.css';
 import Gif from "../Gif";
 import Legenda from "../Legenda";
 import Enunciado from "../Enunciado";
 import ModoDeJogo from "../ModoDeJogo";
 import Tentativas from "../Tentativas";
 import GerarResultado from "../GerarResultado";
-// import words from '../../json/words.json';
 
 const Senha = () => {
     const { setPassword, setArrayAnswer, win, guesses, guessesCount, gifOn, setGifOn } =
@@ -34,7 +33,7 @@ const Senha = () => {
 
     return (
         <>
-            <h1>Senha</h1>
+            <h1 className={styles.titulo}>Senha</h1>
             <ModoDeJogo />
             <Enunciado />
             <br />

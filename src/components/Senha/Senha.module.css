@@ -1,12 +1,12 @@
 
-h1 {
+.titulo {
     font-family: var(--fonte);
     font-size: 5em;
     margin-block: 0 5vh;
 }
 
 @media screen and (min-width: 481px) and (max-width: 1024px) {
-    h1 {
+    .titulo {
         font-size: 7em;
     }
 }
