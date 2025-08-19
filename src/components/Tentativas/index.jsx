@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { SenhaContext } from "../../context/SenhaContext";
 import Tentativa from "./Tentativa";
+import styles from './Tentativas.module.css';
 
 
 const Tentativas = () => {
@@ -8,10 +9,10 @@ const Tentativas = () => {
 
     return (
         <div>
-                <ul>
+                <ul className={styles.lista}>
                     {guesses.map((element, index) => {
                         return (
-                            <li key={index}>
+                            <li key={index} className={styles.item}>
                                 <Tentativa 
                                     arraySenha={element.answer}
                                     arrayTentativa={element.guess}

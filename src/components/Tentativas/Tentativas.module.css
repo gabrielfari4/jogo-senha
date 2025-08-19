@@ -1,0 +1,28 @@
+
+.lista {
+    list-style-type: none; 
+    display: flex; 
+    flex-direction: column-reverse; 
+    align-items: center; 
+    row-gap: 1.2vh; 
+    padding: 0;
+}
+
+.item {
+    display: flex; 
+    column-gap: .4vw; 
+    justify-content: center; 
+    align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+    .item {
+        column-gap: 1vw;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .item {
+        column-gap: .5vw;
+    }
+}
