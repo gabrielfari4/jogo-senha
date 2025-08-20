@@ -3,11 +3,11 @@ import { SenhaContext } from "../../context/SenhaContext";
 import styles from "./Enunciado.module.css"
 
 const Enunciado = () => {
-    const { password, count, randomWord, win } = useContext(SenhaContext)
+    const { password, count, win } = useContext(SenhaContext)
 
     return (
         <>
-            {password === randomWord ? (
+            {isNaN(password) ? (
                             <p className={styles.texto}>Adivinhe a senha de 5 letras!</p>
                         ) : (
                             <p className={styles.texto}>Adivinhe a senha de 5 dígitos!</p>

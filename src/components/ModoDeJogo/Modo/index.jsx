@@ -5,8 +5,6 @@ import styles from './Modo.module.css';
 const Modo = ({ children, value, checked, variante }) => {
     const {setPassword, password, setCount, setGuessesCount } = useContext(SenhaContext);
 
-    // TODO: resetar password
-
     const handlePasswordChange = (event) => {
         setPassword(event.target.value)
     }

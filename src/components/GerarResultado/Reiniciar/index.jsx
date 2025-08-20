@@ -1,12 +1,18 @@
 import { useContext } from "react";
 import { SenhaContext } from "../../../context/SenhaContext";
-
+import words from '../../../json/words.json';
+import styles from './Reiniciar.module.css';
 
 const Reiniciar = () => {
-    const { setArrayAnswer, setGuess, setWin, setGuesses, setCount, setGuessesCount } = useContext(SenhaContext)
+    const { setGuess, setWin, setGuesses, setCount, setGuessesCount, setPassword } = useContext(SenhaContext)
+
+    const palavra = () => {
+        let randomWord = words[Math.floor(Math.random() * words.length)]
+        return randomWord;
+    }
 
     const playAgain = () => {
-        // setArrayAnswer([])
+        setPassword(palavra())
         setGuess("")
         setWin(false)
         setGuesses([])
@@ -15,7 +21,7 @@ const Reiniciar = () => {
     }
 
     return (
-        <button onClick={() => playAgain()}>JOGAR NOVAMENTE</button>
+        <button onClick={() => playAgain()} className={styles.reiniciar}>JOGAR NOVAMENTE</button>
     )
 }
 export default Reiniciar;

@@ -3,14 +3,9 @@ import { useEffect, useState } from 'react';
 import words from '../json/words.json';
 
 
-let randomWord = words[Math.floor(Math.random() * words.length)];
-let randomNumber = Math.floor(Math.random() * 99999).toString();
-if (randomNumber.length < 5) {
-    randomNumber = randomNumber.padStart(5, "0");
-}
+let randomWord = words[Math.floor(Math.random() * words.length)]
 
 export const SenhaProvider = ({children}) => {
-    // const [password, setPassword] = useState();
     const [password, setPassword] = useState(randomWord);
     const [arrayAnswer, setArrayAnswer] = useState([]);
     const [guess, setGuess] = useState("");
@@ -20,13 +15,13 @@ export const SenhaProvider = ({children}) => {
     const [guessesCount, setGuessesCount] = useState(7)
     const [gifOn, setGifOn] = useState(false)
     
-        const handleGif = () => {
-            setGifOn(true)
-        }
+    const handleGif = () => {
+        setGifOn(true)
+    }
 
     useEffect(() => {
-        setArrayAnswer(password.split(""));
-        
+        if (password) setArrayAnswer(password.split(""));
+        console.log(password)
     }, [password]);
 
     return (
@@ -35,7 +30,6 @@ export const SenhaProvider = ({children}) => {
             setPassword,
             arrayAnswer,
             setArrayAnswer,
-            randomNumber,
             randomWord,
             guess,
             setGuess,

@@ -15,8 +15,7 @@ const Gif = ({ status }) => {
     return (
             <img 
                 src={gifSrc} 
-                alt={`Gif de ${status}`} 
-                // style={{ width: '20vw', height: '20vh', borderRadius: '8px'}}
+                alt={`Gif de ${status}`}
                 className={styles.gif}
             />
     )
