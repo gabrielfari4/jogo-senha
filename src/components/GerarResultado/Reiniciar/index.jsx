@@ -3,6 +3,7 @@ import { SenhaContext } from "../../../context/SenhaContext";
 import words from '../../../json/words.json';
 import styles from './Reiniciar.module.css';
 
+
 const Reiniciar = () => {
     const { setGuess, setWin, setGuesses, setCount, setGuessesCount, setPassword } = useContext(SenhaContext)
 

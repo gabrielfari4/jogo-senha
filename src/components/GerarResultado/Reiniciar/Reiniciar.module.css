@@ -1,1 +1,19 @@
 
+.reiniciar {
+    padding: 0;
+}
+
+@media screen and (max-width: 480px) {
+    .reiniciar {
+        width: 50vw;
+        height: 5vh;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .reiniciar {
+        width: 30vw;
+        height: 5vh;
+        font-size: 1.25em;
+    }
+}

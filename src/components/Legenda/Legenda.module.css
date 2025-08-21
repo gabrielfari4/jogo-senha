@@ -41,8 +41,8 @@ div:nth-child(3) .quadrado {
         width: 100%;
     }
     .quadrado {
-        width: 2.3vw;
-        height: 2.3vw;
+        width: 3vw;
+        height: 3vw;
     }
     .texto {
         font-size: 1.1em;

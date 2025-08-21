@@ -1,9 +1,23 @@
 
 
+.botao {
+    width: 15vw;
+    height: 8vh;
+    font-size: 1.25em;
+    padding: 0;
+}
+
+@media screen and (max-width: 480px) {
+    .botao {
+        width: 50vw;
+        height: 5vh;
+    }
+}
+
 @media screen and (min-width: 481px) and (max-width: 1024px) {
     .botao {
-        width: 30vw;
-        height: 4vh;
+        width: 35vw;
+        height: 6.5vh;
         font-size: 1.5em;
         padding: 0;
     }
