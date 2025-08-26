@@ -21,7 +21,6 @@ export const SenhaProvider = ({children}) => {
 
     useEffect(() => {
         if (password) setArrayAnswer(password.split(""));
-        console.log(password)
     }, [password]);
 
     return (
